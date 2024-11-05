@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Vue Stepper</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div class="card">
+            <h1>{{ title }}</h1>
+            <div class="steppers__row">
+                <div 
+                    v-for="(stepDescription, index) in steppersDescriptions"
+                    :class="currentStep === index ? 'step-circle step-circle_active' : 'step-circle'"
+                    @click="selectStep(index)"
+                >
+                    {{ index + 1 }}
+                </div>
+            </div>
+            <div class="text">
+                {{ steppersDescriptions[currentStep] }}
+            </div>
+            <div class="btns-group" v-if="currentStep !== steppersDescriptions.length - 1">
+                <button :disabled="beforeBtnDisabled" @click="beforeStep">←</button>
+                <button @click="nextStep">→</button>
+            </div>
+            <div v-if="currentStep === steppersDescriptions.length - 1">
+                <button :disabled="nextBtnDisabled" @click="returnToStart">Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="index.js"></script>
+</body>
+</html>

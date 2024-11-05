@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+[v-cloak]{
+    display: none;
+}
+
+.card{
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 10px;
+    padding: 50px;
+    width: 600px;
+}
+
+.steppers__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.step-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #f6f6f6, #cfcfcf);
+    box-shadow:  7px 7px 14px #c4c4c4,
+                 -7px -7px 14px #ffffff;
+}
+
+.step-circle:hover{
+    cursor: pointer;
+}
+
+.step-circle_active{
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cfcfcf, #f6f6f6);
+    box-shadow:  7px 7px 14px #c4c4c4,
+                -7px -7px 14px #ffffff;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 150px;
+}
+
+.btns-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* From Uiverse.io by adamgiebl */ 
+button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #ffffffc4, -6px -6px 12px #c4c4c4;
+  }
+  
+  button:hover {
+    border: 1px solid white;
+  }
+  
+  button:active {
+    box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+  }
+
+  button:disabled{
+    opacity: 0.5;
+  }
+  
